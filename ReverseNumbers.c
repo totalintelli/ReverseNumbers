@@ -10,3 +10,7 @@
 #define MAX 1000	
 typedef signed long int Long;
 
+int main(int argc, char *argv[]);
+void Input(Long *number, Long(*numbers));
+void ReverseNumbers(Long number, Long(*numbers));
+void Output(Long number, Long(*numbers));
