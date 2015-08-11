@@ -64,4 +64,17 @@ void ReverseNumbers(Long number, Long(*numbers)) {
 		i++;
 	}
 }
-void Output(Long number, Long(*numbers));
+
+/*
+함수 이름: Output
+기     능: 거꾸로 된 수를 모니터에 출력한다.
+입     력: 거꾸로 된 수, 수들의 개수
+출     력: 없음
+*/
+void Output(Long number, Long(*numbers)) {
+	Long i;
+
+	for (i = 0; i < number; i++) {
+		printf("%d", numbers + i);
+	}
+}
