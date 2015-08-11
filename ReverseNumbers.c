@@ -25,6 +25,22 @@ int main(int argc, char *argv[]) {
 
 	return 0;
 }
-void Input(Long *number, Long(*numbers));
+
+/*
+함수 이름: Input
+기     능: 수와 수들을 입력받는다.
+입     력: 없음
+출     력: 수, 수들
+*/
+void Input(Long *number, Long(*numbers)) {
+
+	Long i;
+
+	scanf("%d", number);
+
+	for (i = 0; i < number; i++) {
+		scanf("%d", numbers + i);
+	}
+}
 void ReverseNumbers(Long number, Long(*numbers));
 void Output(Long number, Long(*numbers));
