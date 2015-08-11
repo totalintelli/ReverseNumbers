@@ -42,5 +42,26 @@ void Input(Long *number, Long(*numbers)) {
 		scanf("%d", numbers + i);
 	}
 }
-void ReverseNumbers(Long number, Long(*numbers));
+
+/*
+함수 이름: ReverseNumbers
+기     능: 수와 수들을 입력받아 수들을 뒤집는다.
+입     력: 수, 수들
+출     력: 뒤집힌 수들
+*/
+void ReverseNumbers(Long number, Long(*numbers)) {
+	Long temp;
+	Long i = 0;
+	Long j;
+
+	j = number - 1;
+
+	while (i < j) {
+		temp = numbers[i];
+		numbers[i] = numbers[j];
+		numbers[j] = temp;
+		j--;
+		i++;
+	}
+}
 void Output(Long number, Long(*numbers));
