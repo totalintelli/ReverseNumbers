@@ -7,7 +7,8 @@
 */
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#define MAX 1000	
+#define MAX 100
+
 typedef signed long int Long;
 
 int main(int argc, char *argv[]);
@@ -34,12 +35,13 @@ int main(int argc, char *argv[]) {
 */
 void Input(Long *number, Long(*numbers)) {
 
-	Long i;
+	Long i = 0;
 
 	scanf("%d", number);
 
-	for (i = 0; i < number; i++) {
+	while(i < *number) {
 		scanf("%d", numbers + i);
+		i++;
 	}
 }
 
@@ -75,7 +77,7 @@ void Output(Long number, Long(*numbers)) {
 	Long i;
 
 	for (i = 0; i < number; i++) {
-		printf("%d", numbers + i);
+		printf("%d ", numbers[i]);
 	}
 
 	printf("\n");
